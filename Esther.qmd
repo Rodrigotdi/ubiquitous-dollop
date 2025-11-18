@@ -33,3 +33,119 @@ Not much classes.
 2 ways to create classes 
 - from a list
 - from a vector
+
+## Vectors
+Many things in R are vectors (and most of the other things are lists).
+A vector is a collection of values of the same type (possibly a single value).
+
+```{r}
+x<- 15.25
+length(x) ##all vectors have a length
+x[1]
+```
+
+```{r}
+y <- c(1, -2, 45, 1.5, -1e-10)
+y 
+typeof(y)
+y[2]
+length(y)
+```
+
+```{r}
+c(x,y)
+```
+
+
+### Character vectors
+This is not R strength...
+
+```{r}
+z <- "Alice"
+length(z)
+```
+
+Salvation comes from the 'stringr' package
+
+```{r}
+library(stringr)
+```
+
+```{r}
+str_length(z)
+```
+
+```{r}
+complicated <- "🤠"
+complicated
+length(complicated)
+str_length(complicated)
+```
+
+### Indexing
+```{r}
+x <- c(6,5,1,2,3,4)
+x[3]
+```
+
+```{r}
+x[4]<- 15
+x
+```
+Assignement can be understood as a value semantic assignement : 'x' and 'y' are different vectors with the same initial content.
+
+
+```{r}
+y <- x
+y
+```
+Therefore, modifying 'x' has no effect on 'y'.
+
+```{r}
+x[1] <- 18
+x
+y
+```
+Indexing is made with vectors of any length
+
+```{r}
+x
+x[c(2, 2, 1, 4, 3)]
+```
+
+```{r}
+x[0]
+x[7]
+x[10]
+```
+```{r}
+typeof(numeric(0))
+length(numeric(0))
+```
+
+
+```{r}
+typeof(NA)
+length(NA)
+```
+```{r}
+x
+x[c(4, 1, 0, 15)]
+```
+
+
+```{r}
+c(numeric(0), 5, numeric(0))
+```
+
+```{r}
+x
+x[c(-1, -4)]
+```
+
+```{r}
+y <- c("A", "B", "C")
+```
+
+
+
