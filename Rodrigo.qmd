@@ -7,6 +7,8 @@ format: html
 
 ## Types and classes
 
+### Types
+
 ```{r}
 typeof(1.5)
 typeof("toto")
@@ -17,5 +19,12 @@ typeof(typeof)
 typeof(list())
 ```
 
+### Classes
+
+```{r}
+data(iris)
+typeof(iris)
+class(iris)
+```
 
 
