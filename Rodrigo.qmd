@@ -34,9 +34,9 @@ Many things in R are vectors(and most of the other things are lists)
 A vector is a collection of values of the same type (possibly a single value)
 
 ```{r}
-x <- 15.25
-length(x)
-x[1]
+w<- 15.25
+length(w)
+w[1]
 
 ```
 
@@ -90,6 +90,73 @@ emojis_2 <-c( "😀😃", "🤣😎")
 emojis_2
 length(emojis_2)
 str_length(emojis_2)
+```
 
+
+## Indexing
+
+```{r}
+x <- c(18,6,1,2,3,4)
+x[3]
+
+```
+```{r}
+x[4] <- 15
+x
+```
+
+Assignment can be understood has a value semantic assignment: 'x' and 'm' are different vectors witht the same initial content.
+
+```{r}
+m <- x
+m
+
+```
+
+
+```{r}
+x[1] <- 12
+x
+m
+```
+
+
+Therefore modifying 'x' has no effect on 'm'
+
+
+
+Indexing is made with vectors of any length
+
+```{r}
+x
+x[c(2,2,1,4,3)]
+```
+
+```{r}
+x[0] ## no possible meaning -> empty numeric vector
+x[7] ## no value there -> not avalaible
+
+```
+
+```{r}
+typeof(numeric(0))
+length(numeric(0))
+```
+
+```{r}
+typeof(NA)
+length(NA)
+typeof(NA_integer_)
+```
+
+
+```{r}
+x[c(4,1,2,0,12)]
+c(numeric(0),5,numeric(0))
+```
+
+```{r}
+x
+x[c(-1,-4)]
 ```
 
