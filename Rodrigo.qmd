@@ -42,8 +42,8 @@ w[1]
 
 
 ```{r}
-length(length(x))
-typeof(length(x))
+length(length(w))
+typeof(length(w))
 ```
 
 
@@ -58,7 +58,7 @@ length(y)
 c function can be seen as a creation function or, more accurately, as a vector concatenetion function
 
 ```{r}
-c(x,y)
+c(w,y)
 ```
 
 
