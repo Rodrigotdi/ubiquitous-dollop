@@ -176,3 +176,37 @@ a
 a[c(TRUE,FALSE,TRUE)]
 ```
 
+
+
+## Lists
+
+```{r}
+broken <- c(1L,1.5,"toto",FALSE)
+broken
+typeof(broken)
+```
+
+Vectors must be type uniform, which will trigger a conversion to character in many cases.
+
+Lists do not have this limitation
+
+### Creating a list
+
+```{r}
+bar <- list(1L,1.5,"toto",FALSE)
+bar
+```
+
+```{r}
+typeof(bar)
+length(bar)
+```
+
+
+
+```{r}
+foo <- list(c(1,2,3),TRUE,length)
+foo
+length(foo)
+```
+
