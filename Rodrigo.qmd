@@ -4,3 +4,18 @@ author: "Rodrigo Tellez de Ita"
 format: html
 ---
 
+
+## Types and classes
+
+```{r}
+typeof(1.5)
+typeof("toto")
+typeof(TRUE)
+typeof(1L)
+typeof(1)
+typeof(typeof)
+typeof(list())
+```
+
+
+
