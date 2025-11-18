@@ -5,9 +5,8 @@ format: html
 editor: visual
 ---
 
-
-
 ## Types and classes
+
 ```{r}
 typeof(1.5)
 typeof("toto")
@@ -19,20 +18,81 @@ typeof(typeof)
 typeof(list())
 ```
 
-
 A type defines a set (math way) with associated operations.
 
-
 ### Classes
+
 ```{r}
 data(iris)
 typeof(iris)
 class(iris)
 ```
 
+Classes is the way to create your own type. Classes is what you create, type is your environement (= what is given to you). Not much classes. 2 ways to create classes - from a list - from a vector
 
-Classes is the way to create your own type. Classes is what you create, type is your environement (= what is given to you).
-Not much classes. 
-2 ways to create classes 
-- from a list
-- from a vector
+
+
+
+## Vectors 
+
+Many things in R are vectors(and most of the other things are lists)
+
+A vector is a collection of values of the same type (possibly a single value)
+
+```{r}
+w<- 15.25
+length(w)
+w[1]
+
+```
+
+
+```{r}
+length(length(w))
+typeof(length(w))
+```
+
+
+```{r}
+y <- c(1,6,90,-34,1.5,18,1e-12)
+y
+typeof(y)
+y[2]
+length(y)
+```
+
+c function can be seen as a creation function or, more accurately, as a vector concatenetion function
+
+```{r}
+c(w,y)
+```
+
+
+### Character vectors
+
+```{r}
+z <- "Alice"
+length(z)
+```
+
+```{r}
+library(stringr)
+```
+
+```{r}
+str_length(z)
+```
+
+
+```{r}
+emojis <- "😀😃🤣😎"
+emojis
+length(emojis)
+str_length(emojis)
+```
+
+```{r}
+emojis_2 <-c( "😀😃", "🤣😎")
+emojis_2
+length(emojis_2)
+str_length(emojis_2)
