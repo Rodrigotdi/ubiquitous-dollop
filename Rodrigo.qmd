@@ -85,3 +85,11 @@ length(emojis)
 str_length(emojis)
 ```
 
+```{r}
+emojis_2 <-c( "😀😃", "🤣😎")
+emojis_2
+length(emojis_2)
+str_length(emojis_2)
+
+```
+
