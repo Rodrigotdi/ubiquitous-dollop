@@ -4,3 +4,32 @@ author: "Esther"
 format: html
 editor: visual
 ---
+
+
+## Types and classes
+```{r}
+typeof(1.5)
+typeof("toto")
+typeof('also between single quotes')
+typeof(TRUE)
+typeof(1L)
+typeof(1)
+typeof(typeof)
+typeof(list())
+```
+
+A type defines a set (math way) with associated operations.
+
+
+### Classes
+```{r}
+data(iris)
+typeof(iris)
+class(iris)
+```
+
+Classes is the way to create your own type. Classes is what you create, type is your environement (= what is given to you).
+Not much classes. 
+2 wways to create classes 
+- from a list
+- from a vector
