@@ -61,3 +61,27 @@ c function can be seen as a creation function or, more accurately, as a vector c
 c(x,y)
 ```
 
+
+### Character vectors
+
+```{r}
+z <- "Alice"
+length(z)
+```
+
+```{r}
+library(stringr)
+```
+
+```{r}
+str_length(z)
+```
+
+
+```{r}
+emojis <- "😀😃🤣😎"
+emojis
+length(emojis)
+str_length(emojis)
+```
+
