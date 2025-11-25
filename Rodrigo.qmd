@@ -296,6 +296,19 @@ n[["keys"]]
 n[["val"]] ## exact matching only
 n["values"]
 n["values"]|>class()
+n[["values"]]|>class()
 
 ```
 
+Remark: a data frame is a list in which each element has the same length
+
+
+```{r}
+names(n)
+```
+
+```{r}
+names(n) <- c("A","B","C")
+n
+
+```
