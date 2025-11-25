@@ -579,7 +579,7 @@ v <- c(4,5)
 u + v
 ```
 
-### if else
+### ifelse
 
 We want to compute the Shannon's entropy of a distribution
 
