@@ -494,4 +494,27 @@ In this version, the parameter `na.rm` is set to `TRUE` in all the mean calculat
 lapply(my_data,mean,na.rm=TRUE)
 ```
 
+### Anonymous functions a.k.a lambdas
+
+Compact function declaration (can be used directly as parameters)
+
+```{r}
+\(x) x^2
+```
+
+```{r}
+log(1:10,base=10)
+```
+
+A complicated way of doing sthg simple
+
+```{r}
+sapply(1:10, \(x,y) 1+y*log(x),y=2)
+1+2*log(1:10)
+```
+
+```{r}
+lapply(my_data,\(x) mean(x,na.rm = TRUE))
+```
+
 
