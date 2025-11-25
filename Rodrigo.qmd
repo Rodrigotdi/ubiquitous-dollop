@@ -515,6 +515,68 @@ sapply(1:10, \(x,y) 1+y*log(x),y=2)
 
 ```{r}
 lapply(my_data,\(x) mean(x,na.rm = TRUE))
+
+```
+
+
+### Closure
+
+```{r}
+power_function <- function(y){
+  \(x) x^y ## closure: a function + some values
+  
+}
+
+to_the_cube <- power_function(3)
+to_the_cube(1:10)
+to_the_cube
+\(x,y) x^y
+
+```
+```{r}
+x_to_y <- function(x,y) {
+  x^y
+}
+
+f <- \(x) x_to_y(x,2)
+f(5)
+f
+```
+
+
+```{r}
+k <- 3
+g <- \(x) x_to_y(x,k)
+g(3)
+k <- 4
+g(3)
+g
+k <- NULL
+g(5)
+```
+```{r}
+#| eval: false
+rm(k)
+g(6) # does not work any more as k does not exist anymore
+
+```
+## Back to vectors
+
+
+```{r}
+set.seed(42)
+x <- runif(20,min=-1,max=1) ## uniform distribution
+x>0
+sum(x>0)
+sum(x>mean(x))
+x[x<=mean(x)]
+length(x[x>mean(x)])
+```
+
+```{r}
+u <- c(1,2,3)
+v <- c(4,5)
+u + v
 ```
 
 
