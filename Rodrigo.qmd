@@ -400,7 +400,29 @@ my_second_fun(1,2)
 
 A variable defined in a function is private to the function. It does not care about existing variables with the same name and it disapears just before the end of the function execution.
 
-```{r}
+### Default parameters
 
+To specify a defautlt value for a parameter, we add a equal sign after the formal parameter name followed by default value
+
+```{r}
+x_to_y <- function(x,y=2){
+  x^y
+}
 ```
 
+
+```{r}
+x_to_y(2,3)
+x_to_y(10)
+```
+
+Standard calls use positional effective parameters: all effective parameters are specified in the order of the formal parameters.
+
+This can be combined with named effective parameters: the name of the format parameters is used in the call, followed by an equal sign and the chosen value. In this case, order does not matter any more
+
+
+```{r}
+x_to_y(y=4,x=2)
+```
+
+Positions and names can be combined if all names are after the unnamed parameters
