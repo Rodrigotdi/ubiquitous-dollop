@@ -248,6 +248,54 @@ NULL + 1
 ### Back to indexing lists
 
 
+The indexing operation '[]' does not change the type or the class of the corresponding object
 
 
+### Double brackets
+
+
+```{r}
+li <- list(c(1,2,3),c(TRUE,FALSE),LETTERS[10:15])
+li[1]
+li[[1]]
+```
+
+```{r}
+li[[2]] <- c("toto","bar")
+li[[4]] <- 1:15 # sequence of integer from 1 to 15
+li
+```
+
+```{r}
+li[[c(1,2)]]
+li[[c(3,2)]]
+```
+
+```{r}
+l <- list(1:4,list(letters[1:5],list(c("foo","bar"))))
+l
+l[[2]]
+l[[c(2,1)]]
+l[[c(2,1)]]
+l[[c(2,2,1,2)]]
+l[[2]][[2]][[1]][[2]]
+```
+
+### Names
+
+```{r}
+n <- list(keys=c('A','B','C'),values=c(10,11,12),key=c(TRUE,FALSE))
+n
+n[1]
+n[[1]]
+n$keys 
+n$val ## funny but dangerous name compilation
+n$key
+n$ke
+n[["keys"]]
+n[["val"]] ## exact matching only
+n["values"]
+n["values"]|>class()
+
+```
 
